@@ -2,12 +2,12 @@
 <html>
     <head>
         <title>Santa</title>
+        <script type="text/javascript" src="./onclick.js"></script>
     </head>
 
     <body>
         
-        <!-- <script type="text/javascript" src="./openstreetmap.js"></script> -->
-        <form>
+        <form action="javascript:void(0)">
             <label for="saddress">Street Address</label>
             <input type="text" id="saddress" name="saddress"><br>
             <label for="city">City</label>
@@ -18,10 +18,11 @@
             <input type="text" id="country" name="country"><br>
             <label for="ZIPCODE">ZIP CODE</label>
             <input type="number" id="zipcode" name="zipcode"><br>
-            <input type="button" value="Submit"><br>
-            <element onclick="OnClick"></element>
+            <input type="button" onclick="OnClick()" value="Submit"><br>
         </form>
        
-        
+       
+         
+    
     </body>
 </html>

@@ -1,9 +1,14 @@
 import sunCalc from "./sunCalc.js";
 
-function Nadir() {
-    let longitude = getLong;
-    let latitude = getLat;
-    let date = new Date("2022,12,24");
-    sunCalc.getTimes(/*Date*/ date, /*Number*/ latitude, /*Number*/ longitude, /*Number (default=0)*/ height)
+const month = 12
+const day = 24
 
+function Nadir(longitude, latitude){
+
+    let year = new Date().getFullYear();
+    let date = new Date(year,month-1,day);
+
+    let times = sunCalc.getTimes(/*Date*/ date, /*Number*/ latitude, /*Number*/ longitude, /*Number (default=0)*/ height)
+    return times.nadir
 }
+module.exports = Nadir
