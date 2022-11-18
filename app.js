@@ -7,5 +7,8 @@ const port = 3000
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/website.html"))
 })
+app.get("/modules/*", (req, res) => {
+    res.sendFile(path.join(__dirname, req.url))
+})
 
 app.listen(port)

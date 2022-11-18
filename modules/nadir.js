@@ -11,4 +11,4 @@ function Nadir(longitude, latitude){
     let times = sunCalc.getTimes(/*Date*/ date, /*Number*/ latitude, /*Number*/ longitude, /*Number (default=0)*/ height)
     return times.nadir
 }
-module.exports = Nadir
+export { Nadir}

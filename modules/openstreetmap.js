@@ -26,3 +26,12 @@ function getLong() {
     let Long = document.getElementsByName("long").value;
     return Long
 }
+export {
+    getSaddress,
+    getCity,
+    getRegion,
+    getCountry,
+    getZIPCode,
+    getLat,
+    getLong
+}
