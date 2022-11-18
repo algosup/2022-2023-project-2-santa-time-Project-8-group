@@ -1,11 +1,3 @@
-import {
-    getCity,
-    getCountry,
-    getRegion,
-    getSaddress,
-    getZIPCode
-} from "./openstreetmap.js"
-
 function OnClick() { 
     let street = getSaddress()
     let city = getCity()
