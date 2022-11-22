@@ -11,10 +11,9 @@ const day = 24;
 
 function CollectRequestData(request, response) {
     if(request.url.startsWith("/?")) {
-        response.call(Extract)
-        return
         // User filled the form
-        
+        let result = Extract()
+        response.send(result)
     }
     else {
         // Regular page
@@ -23,13 +22,13 @@ function CollectRequestData(request, response) {
 };
 //function to extract the longitude and latitude from CollectRequestData and need to call Nadir
 function Extract() {
-    Nadir.call
+    Nadir()
 };
 
-function Nadir(longitude, latitude){
-
+function Nadir(longitude = 47.2, latitude = 2.0){
     let year = new Date().getFullYear();
     let date = new Date(year,month-1,day);
+    let height = 0;
 
     let times = sunCalc.getTimes(/*Date*/ date, /*Number*/ latitude, /*Number*/ longitude, /*Number (default=0)*/ height)
     return times.nadir
