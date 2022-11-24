@@ -1,10 +1,17 @@
+const path = require("path");
 const express = require("express");
 const modules = require("./modules");
+
 const app = express();
 const port = 3000;
 
 app.get("/", (req, res) => {
-   modules.CollectRequestData(req, res)
+    let params = modules.GetParameters(req.url);
+    if (Object.keys(params).length === 0) {
+        res.sendFile(path.join(__dirname, "/website.html"));
+    } else {
+        res.send("Request has parameters!");
+    }
 });
 
-app.listen(port)
+app.listen(port);
