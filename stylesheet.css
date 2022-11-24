@@ -1,3 +1,35 @@
-body {
-    background-color: dimgrey;
+form {
+    background-color: lightgray;
+    border-style: solid;
+    border-radius: 8px;
+    margin-top: 70px;
+    width: 20%;
+    height: 350px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 4px;
+    grid-auto-flow: row;
+}
+
+.style {
+    border: 3px solid dimgrey;
+    border-radius: 5px;
+    width: 50%;
+    padding: 5px 10px;
+    margin: 10px 5px;
+}
+
+input[type=text]:focus{
+    border: 4px solid black;
+}
+
+input[type=submit] {
+    background-color: dimgray;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    margin: 4px 5px;
+    cursor: pointer;
 }
