@@ -1,35 +1,39 @@
 form {
     background-color: lightgray;
     border-style: solid;
-    border-radius: 8px;
-    margin-top: 70px;
-    width: 20%;
-    height: 350px;
-    display: grid;
+    border-radius: 2%;
+    box-sizing: border-box;
+    margin-top: 20%;
+    width: 30%;
+    height: 150%;
+    display: flexbox;
     justify-content: center;
     align-content: center;
-    gap: 4px;
+    gap: 5%;
     grid-auto-flow: row;
 }
 
 .style {
-    border: 3px solid dimgrey;
-    border-radius: 5px;
+    border: 6% solid dimgrey;
+    border-radius: 6%;
     width: 50%;
-    padding: 5px 10px;
-    margin: 10px 5px;
+    padding: 6% 10%;
+    margin: 7% 6%;
+    font-size: medium;
+    font-weight: bold;
 }
 
 input[type=text]:focus{
-    border: 4px solid black;
+    border: 5% solid black;
 }
 
 input[type=submit] {
     background-color: dimgray;
     border: none;
     color: white;
-    padding: 8px 15px;
+    padding: 8% 12%;
     text-decoration: none;
-    margin: 4px 5px;
+    margin: 6% 7%;
     cursor: pointer;
+    font-size: small;
 }
