@@ -53,7 +53,7 @@ input[type=submit] {
 
 .tree {
     position: absolute;
-    margin: 0 auto;
+    margin: 0% auto;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
@@ -117,4 +117,65 @@ input[type=submit] {
 }
 .leaf3::after {
     border-bottom-color: #008000;
+}
+
+
+/*.presents {
+    position: absolute;
+    margin: 0% auto;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.present {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin: 0 auto -5%;
+}
+.present::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+.day {
+    width: 13%;
+    height: 25%;
+    border: 2% solid red;
+    background-color: red;
+    margin: 77% 60%;
+}
+.hour {
+    width: 10%;
+    height: 30%;
+    border: 2% solid blue;
+    background-color: blue;
+    margin: 75% 75%;
+}
+.minute {
+    width: 20%;
+    height: 13%;
+    border: 2% solid yellow;
+    background-color: yellow;
+    margin: 77% 110%;
+    transform: rotate(-35deg);
+}
+.second {
+    width: 15%;
+    height: 20%;
+    border: 2% solid green;
+    background-color: green;
+    margin: 79% 127%;
+}*/
+
+
+.p {
+    width: 10%;
+    height: 10%;
+}
+p {
+    margin-left: 90%;
+    margin-top: 0;
+    /*color: white;*/
 }
