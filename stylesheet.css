@@ -46,20 +46,32 @@ input[type=submit] {
 
 
 .tree {
+    position: absolute;
     margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .trunk {
     width: 5vw;
     height: 200px; /* TODO: Responsive */
-    margin: 0 auto;
+    margin: 0 auto 5% auto;
     background-color: #964b00;
+}
+
+.leaves {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    width: 100%;
+    height: 80%;
 }
 
 /* Adapted from https://codepen.io/fvignals/pen/waxvqZ */
 .leaf {
-    display: flex;
-	/* flex-direction: column-reverse; */
+    position: relative; /* Thanks Guillaume */
     height: 0;
     overflow: hidden;
     margin: 0 auto -5% auto;
