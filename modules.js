@@ -4,11 +4,6 @@ var sunCalc = require('suncalc');
 const month = 12;
 const day = 24;
 
-/*function RequestDB() {
-    //need to include a call to CollectRequestData
-    CollectRequestData.call
-};*/
-
 function GetParameters(url) {
     let parameters = {}
     let start = url.indexOf('?');
@@ -18,10 +13,37 @@ function GetParameters(url) {
     for (const item of split) {
         let [key, value] = item.split('='); 
         if (value == "") continue; // Don't take into account empty values
+        console.log(value);
+        value = value.replace(/\+/g, "%20"); // Replace + with spaces
+        console.log(value);
         parameters[key] = value;
     }
 
     return parameters
+}
+
+function ParamsToRequest(params) {   
+    let dbURL = "http://noel.gq/api?q="
+    let request = dbURL + (params["street"] != undefined ? params["street"] : "" )+ " " + (params["city"] != undefined ? params["city"] : "" ) + " " + (params["region"] != undefined ? params["region"] : "" ) + " " + (params["country"] != undefined ? params["country"] : "" ) + " " + (params["zipcode"] != undefined ? params["zipcode"] : "" )
+    console.log(request);
+    return request
+}
+
+async function RequestDB(req) {
+    let response = await fetch(req);
+    let data = await response.json();
+
+    // console.log(data);
+    // console.log(data.features);
+    console.log(data.features[0].geometry.coordinates);
+    return data;
+};
+
+function ParseURL(params) {
+    let req = ParamsToRequest(params);
+    let long, lat = RequestDB(req);
+    let nadir = Nadir(long, lat);
+    return nadir;
 }
 
 function CollectRequestData(request, response) {
@@ -35,10 +57,6 @@ function CollectRequestData(request, response) {
         response.sendFile(path.join(__dirname, "/website.html"))
     }
 };
-//function to extract the longitude and latitude from CollectRequestData and need to call Nadir
-function Extract() {
-    Nadir()
-};
 
 function Nadir(longitude = 47.2, latitude = 2.0){
     let year = new Date().getFullYear();
@@ -50,6 +68,6 @@ function Nadir(longitude = 47.2, latitude = 2.0){
 };
 // function acting as a countdown using times.nadir
 module.exports = {
-    // CollectRequestData,
+    ParseURL,
     GetParameters
 }
