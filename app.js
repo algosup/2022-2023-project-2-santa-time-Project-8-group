@@ -4,7 +4,7 @@ const express = require("express");
 const modules = require("./modules.js");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 80;
 
 app.get("/", (req, res) => {
     let params = modules.GetParameters(req.url);

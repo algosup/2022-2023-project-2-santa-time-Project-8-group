@@ -13,9 +13,7 @@ function GetParameters(url) {
     for (const item of split) {
         let [key, value] = item.split('='); 
         if (value == "") continue; // Don't take into account empty values
-        console.log(value);
         value = value.replace(/\+/g, "%20"); // Replace + with spaces
-        console.log(value);
         parameters[key] = value;
     }
 
@@ -25,7 +23,6 @@ function GetParameters(url) {
 function ParamsToRequest(params) {   
     let dbURL = "http://noel.gq/api?q="
     let request = dbURL + (params["street"] != undefined ? params["street"] : "" )+ " " + (params["city"] != undefined ? params["city"] : "" ) + " " + (params["region"] != undefined ? params["region"] : "" ) + " " + (params["country"] != undefined ? params["country"] : "" ) + " " + (params["zipcode"] != undefined ? params["zipcode"] : "" )
-    console.log(request);
     return request
 }
 
@@ -33,15 +30,16 @@ async function RequestDB(req) {
     let response = await fetch(req);
     let data = await response.json();
 
-    // console.log(data);
-    // console.log(data.features);
-    console.log(data.features[0].geometry.coordinates);
-    return data;
+    return data.features[0].geometry.coordinates;
 };
 
-function ParseURL(params) {
+async function ParseURL(params) {
     let req = ParamsToRequest(params);
-    let long, lat = RequestDB(req);
+    let coord = await RequestDB(req);
+
+    let long = coord[0];
+    let lat = coord[1];
+    
     let nadir = Nadir(long, lat);
     return nadir;
 }
@@ -58,12 +56,11 @@ function CollectRequestData(request, response) {
     }
 };
 
-function Nadir(longitude = 47.2, latitude = 2.0){
+function Nadir(longitude, latitude){
     let year = new Date().getFullYear();
     let date = new Date(year,month-1,day);
-    let height = 0;
 
-    let times = sunCalc.getTimes(/*Date*/ date, /*Number*/ latitude, /*Number*/ longitude, /*Number (default=0)*/ height)
+    let times = sunCalc.getTimes(date, latitude, longitude);
     return times.nadir
 };
 // function acting as a countdown using times.nadir
