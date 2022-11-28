@@ -1,13 +1,7 @@
-const path = require("path");
 var sunCalc = require('suncalc');
 
 const month = 12;
-const day = 24;
-
-/*function RequestDB() {
-    //need to include a call to CollectRequestData
-    CollectRequestData.call
-};*/
+const day = 25;
 
 function GetParameters(url) {
     let parameters = {}
@@ -18,38 +12,47 @@ function GetParameters(url) {
     for (const item of split) {
         let [key, value] = item.split('='); 
         if (value == "") continue; // Don't take into account empty values
+        value = value.replace(/\+/g, "%20"); // Replace + with spaces
         parameters[key] = value;
     }
 
     return parameters
 }
 
-function CollectRequestData(request, response) {
-    if(request.url.startsWith("/?")) {
-        // User filled the form
-        let result = Extract()
-        response.send(result)
-    }
-    else {
-        // Regular page
-        response.sendFile(path.join(__dirname, "/website.html"))
-    }
-};
-//function to extract the longitude and latitude from CollectRequestData and need to call Nadir
-function Extract() {
-    Nadir()
+function ParamsToRequest(params) {   
+    let dbURL = "http://noel.gq/api?q="
+    let request = dbURL + (params["street"] != undefined ? params["street"] : "" )+ " " + (params["city"] != undefined ? params["city"] : "" ) + " " + (params["region"] != undefined ? params["region"] : "" ) + " " + (params["country"] != undefined ? params["country"] : "" ) + " " + (params["zipcode"] != undefined ? params["zipcode"] : "" )
+    return request
+}
+
+async function RequestDB(req) {
+    let response = await fetch(req);
+    let data = await response.json();
+
+    return data.features[0].geometry.coordinates;
 };
 
-function Nadir(longitude = 47.2, latitude = 2.0){
+async function ParseURL(params) {
+    let req = ParamsToRequest(params);
+    let coord = await RequestDB(req);
+
+    let long = coord[0];
+    let lat = coord[1];
+
+    let nadir = Nadir(long, lat);
+    return {"time": nadir};
+}
+
+function Nadir(longitude, latitude){
     let year = new Date().getFullYear();
-    let date = new Date(year,month-1,day);
-    let height = 0;
+    let timestamp = Date.UTC(year, month-1, day); // UTC time in miliseconds
+    let date = new Date(timestamp);
 
-    let times = sunCalc.getTimes(/*Date*/ date, /*Number*/ latitude, /*Number*/ longitude, /*Number (default=0)*/ height)
-    return times.nadir
+    let times = sunCalc.getTimes(date, latitude, longitude);
+    return times.nadir.getTime(); // UTC time in miliseconds
 };
-// function acting as a countdown using times.nadir
+
 module.exports = {
-    // CollectRequestData,
+    ParseURL,
     GetParameters
 }
