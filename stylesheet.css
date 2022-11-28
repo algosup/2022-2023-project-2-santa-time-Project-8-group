@@ -49,11 +49,9 @@ input[type=submit] {
     z-index: -100;
 }
 
-
-
 .tree {
     position: absolute;
-    margin: 0 auto;
+    margin: 0% auto;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
@@ -117,4 +115,96 @@ input[type=submit] {
 }
 .leaf3::after {
     border-bottom-color: #008000;
+}
+
+
+.presents {
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50vw;
+    top: 27vh;
+    height: 10vh;
+    z-index: auto;
+}
+.present {
+    position: relative;
+    height: 35vh;
+    width: 50vw;
+    display: inline-block;
+}
+/*.present::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}*/
+.day {
+    width: 11%;
+    height: 29%;
+    border-width: 2%;
+    border-style: solid;
+    border-color: red;
+    background-color: red;
+    left: 15%;
+    top: 165%;
+}
+.hour {
+    width: 10%;
+    height: 40%;
+    border-width: 2%;
+    border-style: solid;
+    border-color: blue;
+    background-color: blue;
+    left: 16%;
+    top: 165%;
+}
+.minute {
+    width: 20%;
+    height: 14%;
+    border-width: 2%;
+    border-style: solid;
+    border-color: yellow;
+    background-color: yellow;
+    transform: rotate(-35deg);
+    left: 35%;
+    top: 146%;
+}
+.second {
+    width: 15%;
+    height: 27%;
+    border-width: 2%;
+    border-style: solid;
+    border-color: green;
+    background-color: green;
+    left: 30%;
+    top: 165%;
+}
+
+
+p {
+    position: absolute;    
+    display: inline-block;
+}
+.para {
+    color: black;
+    position: relative;
+    height: 50vh;
+    width: 50vw;
+}
+.days {
+    left: 19%;
+    top: 52%;
+}
+.hours {
+    left: 31%;
+    top: 49%;
+}
+.minutes {
+    left: 66%;
+    top: 44%;
+    transform: rotate(-35deg);
+}
+.secondes {
+    left: 79%;
+    top: 54%;
 }
