@@ -49,8 +49,6 @@ input[type=submit] {
     z-index: -100;
 }
 
-
-
 .tree {
     position: absolute;
     margin: 0% auto;
@@ -120,62 +118,93 @@ input[type=submit] {
 }
 
 
-/*.presents {
+.presents {
     position: absolute;
-    margin: 0% auto;
-    top: 50%;
-    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    left: 50vw;
+    top: 27vh;
+    height: 10vh;
+    z-index: auto;
 }
 .present {
     position: relative;
-    height: 50px;
-    width: 50px;
-    margin: 0 auto -5%;
+    height: 35vh;
+    width: 50vw;
+    display: inline-block;
 }
-.present::after {
+/*.present::after {
     content: "";
     display: block;
     padding-bottom: 100%;
-}
+}*/
 .day {
-    width: 13%;
-    height: 25%;
-    border: 2% solid red;
+    width: 11%;
+    height: 29%;
+    border-width: 2%;
+    border-style: solid;
+    border-color: red;
     background-color: red;
-    margin: 77% 60%;
+    left: 15%;
+    top: 165%;
 }
 .hour {
     width: 10%;
-    height: 30%;
-    border: 2% solid blue;
+    height: 40%;
+    border-width: 2%;
+    border-style: solid;
+    border-color: blue;
     background-color: blue;
-    margin: 75% 75%;
+    left: 16%;
+    top: 165%;
 }
 .minute {
     width: 20%;
-    height: 13%;
-    border: 2% solid yellow;
+    height: 14%;
+    border-width: 2%;
+    border-style: solid;
+    border-color: yellow;
     background-color: yellow;
-    margin: 77% 110%;
     transform: rotate(-35deg);
+    left: 35%;
+    top: 146%;
 }
 .second {
     width: 15%;
-    height: 20%;
-    border: 2% solid green;
+    height: 27%;
+    border-width: 2%;
+    border-style: solid;
+    border-color: green;
     background-color: green;
-    margin: 79% 127%;
-}*/
-
-
-.p {
-    width: 10%;
-    height: 10%;
+    left: 30%;
+    top: 165%;
 }
+
+
 p {
-    margin-left: 90%;
-    margin-top: 0;
-    /*color: white;*/
+    position: absolute;    
+    display: inline-block;
+}
+.para {
+    color: black;
+    position: relative;
+    height: 50vh;
+    width: 50vw;
+}
+.days {
+    left: 19%;
+    top: 52%;
+}
+.hours {
+    left: 31%;
+    top: 49%;
+}
+.minutes {
+    left: 66%;
+    top: 44%;
+    transform: rotate(-35deg);
+}
+.secondes {
+    left: 79%;
+    top: 54%;
 }
