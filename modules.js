@@ -1,8 +1,7 @@
-const path = require("path");
 var sunCalc = require('suncalc');
 
-const month = 12;
-const day = 24;
+const month = "December";
+const day = 25;
 
 function GetParameters(url) {
     let parameters = {}
@@ -39,31 +38,19 @@ async function ParseURL(params) {
 
     let long = coord[0];
     let lat = coord[1];
-    
+
     let nadir = Nadir(long, lat);
     return nadir;
 }
 
-function CollectRequestData(request, response) {
-    if(request.url.startsWith("/?")) {
-        // User filled the form
-        let result = Extract()
-        response.send(result)
-    }
-    else {
-        // Regular page
-        response.sendFile(path.join(__dirname, "/website.html"))
-    }
-};
-
 function Nadir(longitude, latitude){
     let year = new Date().getFullYear();
-    let date = new Date(year,month-1,day);
+    let date = new Date(month + day + ',' + year +' 00:00:00 GMT+00:00');
 
     let times = sunCalc.getTimes(date, latitude, longitude);
-    return times.nadir
+    return times.nadir;
 };
-// function acting as a countdown using times.nadir
+
 module.exports = {
     ParseURL,
     GetParameters
