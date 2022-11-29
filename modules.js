@@ -28,8 +28,12 @@ function ParamsToRequest(params) {
 async function RequestDB(req) {
     let response = await fetch(req);
     let data = await response.json();
-
-    return data.features[0].geometry.coordinates;
+    if (data.features.length == 0){
+        return [0,0] //TODO fix error handling
+    } 
+    else {
+        return data.features[0].geometry.coordinates
+    }
 };
 
 async function ParseURL(params) {
@@ -38,9 +42,11 @@ async function ParseURL(params) {
 
     let long = coord[0];
     let lat = coord[1];
-
-    let nadir = Nadir(long, lat);
-    return {"time": nadir};
+    if (typeof long != 'undefined'){
+        let nadir = Nadir(long, lat);
+        return {"time": nadir};
+    }
+    
 }
 
 function Nadir(longitude, latitude){

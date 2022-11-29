@@ -163,8 +163,8 @@ input[type=submit] {
     height: 14%;
     border-width: 2%;
     border-style: solid;
-    border-color: yellow;
-    background-color: yellow;
+    border-color:  rgb(255, 123, 8);
+    background-color: rgb(255, 123, 8);
     transform: rotate(-35deg);
     left: 35%;
     top: 146%;
@@ -186,7 +186,7 @@ p {
     display: inline-block;
 }
 .para {
-    color: black;
+    color: white;
     position: relative;
     height: 50vh;
     width: 50vw;
@@ -204,7 +204,7 @@ p {
     top: 44%;
     transform: rotate(-35deg);
 }
-.secondes {
+.seconds {
     left: 79%;
     top: 54%;
 }
