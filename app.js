@@ -14,7 +14,7 @@ app.get("/", async (req, res) => {
         let countdown = await modules.ParseURL(params);
         res.send(countdown);
     }
-}); 
+});
 
 app.get("/stylesheet.css", (req, res) => {
    res.write(fs.readFileSync(__dirname + "/stylesheet.css", 'utf8'));

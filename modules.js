@@ -39,7 +39,6 @@ async function RequestDB(req) {
 async function ParseURL(params) {
     let req = ParamsToRequest(params);
     let coord = await RequestDB(req);
-
     let long = coord[0];
     let lat = coord[1];
     if (typeof long != 'undefined'){
@@ -53,7 +52,6 @@ function Nadir(longitude, latitude){
     let year = new Date().getFullYear();
     let timestamp = Date.UTC(year, month-1, day); // UTC time in miliseconds
     let date = new Date(timestamp);
-
     let times = sunCalc.getTimes(date, latitude, longitude);
     return times.nadir.getTime(); // UTC time in miliseconds
 };
