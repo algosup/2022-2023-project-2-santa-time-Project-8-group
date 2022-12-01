@@ -38,10 +38,10 @@ Kubernetes is a system that will automate the scaling and the management of our 
 Since we are not building our own solution, we have a dependency to Azure. 
 
 ### Frontend
-The frontend will be made using HTML, CSS and JavaScript. The website will have a single input that will ask for an address. The user will then be able to click on a button to get the time at which Santa will come for them. The website will then display the time and the address. The website will also have a button to get the time for another address.
+The frontend will be made using HTML, CSS and JavaScript. The website will have a single input that will ask for an address. The user will then be able to click on a button to get the time at which Santa will come for them. The website will then display the time and the address. The website will also have a button to request another address and get the time accordingly.
 
 ### Backend
-The backend will be made using NodeJS. It will use [Express](https://expressjs.com/) to create and handle the server. It will be hosted on Azure and will be able to handle requests from the frontend. The request will be forwarded to the database to get the coordinates. Thanks to those coordinates it will find the position of santa. The backend will then send the time and the address to the frontend.
+The backend will be made using [Node.js](https://nodejs.org/en/). It will use [Express](https://expressjs.com/) to create and handle the server. It will be hosted on Azure and will be able to handle requests from the frontend. The request will be forwarded to the database to get the coordinates. Thanks to those coordinates it will find the position of santa. The backend will then send the time and the address to the frontend.
 
 ### Database
 Our website needs to be able to tell the time at which santa will come. To do that we will host a database that will give us the coordinates of the address the user will provide us. This database will be setup with [photon](https://github.com/komoot/photon) which is a geocoder built for [OpenStreeMap](https://www.openstreetmap.org/)
