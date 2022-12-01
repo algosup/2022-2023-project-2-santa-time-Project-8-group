@@ -1,12 +1,8 @@
 var timer;
 async function submit() {
     const form = document.getElementById('form');
-    let street = form.street.value;
-    let city = form.city.value;
-    let region = form.region.value;
-    let country = form.country.value;
-    let zipcode = form.zipcode.value;
-    let response = await fetch(`/?street=${street}&city=${city}&region=${region}&country=${country}&zipcode=${zipcode}`);
+    let address = form.address.value;
+    let response = await fetch(`/?address=${address}`);
     response.json().then((json) => {
         let timestamp = json["time"];
         let date = Date.now(timestamp);
