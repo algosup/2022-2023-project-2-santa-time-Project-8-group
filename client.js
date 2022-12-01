@@ -10,7 +10,7 @@ async function submit() {
     response.json().then((json) => {
         let timestamp = json["time"];
         let date = Date.now(timestamp);
-            if (timer == undefined) {
+            if (timer != undefined) {
                 clearInterval(timer);
                 };
             timer = setInterval(function() {
