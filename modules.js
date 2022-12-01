@@ -1,6 +1,6 @@
 var sunCalc = require('suncalc');
 
-const month = "December";
+const month = 12;
 const day = 25;
 
 function GetParameters(url) {
@@ -28,27 +28,32 @@ function ParamsToRequest(params) {
 async function RequestDB(req) {
     let response = await fetch(req);
     let data = await response.json();
-
-    return data.features[0].geometry.coordinates;
+    if (data.features.length == 0){
+        return [0,0] //TODO fix error handling
+    } 
+    else {
+        return data.features[0].geometry.coordinates
+    }
 };
 
 async function ParseURL(params) {
     let req = ParamsToRequest(params);
     let coord = await RequestDB(req);
-
     let long = coord[0];
     let lat = coord[1];
-
-    let nadir = Nadir(long, lat);
-    return nadir;
+    if (typeof long != 'undefined'){
+        let nadir = Nadir(long, lat);
+        return {"time": nadir};
+    }
+    
 }
 
 function Nadir(longitude, latitude){
     let year = new Date().getFullYear();
-    let date = new Date(month + day + ',' + year +' 00:00:00 GMT+00:00');
-
+    let timestamp = Date.UTC(year, month-1, day); // UTC time in miliseconds
+    let date = new Date(timestamp);
     let times = sunCalc.getTimes(date, latitude, longitude);
-    return times.nadir;
+    return times.nadir.getTime(); // UTC time in miliseconds
 };
 
 module.exports = {
