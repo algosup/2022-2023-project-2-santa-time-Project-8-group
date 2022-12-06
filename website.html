@@ -7,6 +7,25 @@
     </head>
 
     <body>
+        <div class="sharing">
+            <a href="https://twitter.com/intent/tweet?text=http%3A%2F%2Fsanta.algosup.com" target="_blank">
+                <img src="/images/twitter.svg" alt="Share on Twitter" class="round">
+            </a>
+            <!-- TODO: Fix Facebook app id with our own -->
+            <!-- <a href="https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=https%3A%2F%2Fsanta.algosup.com&redirect_uri=https%3A%2F%2Fsanta.algosup.com" target="_blank">
+                <img src="images/facebook.png" alt="Share on Facebook" class="round">
+            </a> -->
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Fsanta.algosup.com" target="_blank">
+                <img src="images/linkedin.png" alt="Share on LinkedIn">
+            </a>
+            <a href="https://www.reddit.com/submit?url=http%3A%2F%2Fsanta.algosup.com" target="_blank">
+                <img src="images/reddit.png" alt="Share on Reddit" class="round">
+            </a>
+            <a class="mobile-only" href="whatsapp://send?text=http%3A%2F%2Fsanta.algosup.com" target="_blank">
+                <img src="images/whatsapp.svg" alt="Share on Whatsapp" class="round">
+            </a>
+            <input type="image" src="images/copy.svg" alt="Copy to clipboard" onclick="navigator.clipboard.writeText('https:\/\/santa.algosup.com');">
+        </div>
         <div class="background">
             <div class="tree">
                 <div class="leaves">
@@ -30,6 +49,15 @@
                     <p class="seconds"><span id="seconds">00</span><br>seconds</p>
                 </div>    
            </div> 
+        </div>
+        <div class="links">
+            <a href="https://algosup.com" target="_blank">
+                <img class="invert" src="images/algosup.png" alt="Our school's website" class="round">
+            </a>
+            <a href="https://github.com/algosup/2022-2023-project-2-santa-time-Project-8-group" target="_blank">
+                <img src="images/github.png" alt="Github repository" class="round">
+            </a>
+            <button type="button" text="Contact us" onclick="navigator.clipboard.writeText('mathieu.chaput@algosup.com'); alert('Contact us at\nmathieu.chaput@algosup.com');">Contact us</button>
         </div>
         <form action="javascript:submit();" name="forms" id="form">
             <input type="text" id="address" name="address" placeholder="Enter your address." class="style"><br>
