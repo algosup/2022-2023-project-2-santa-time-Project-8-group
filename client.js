@@ -1,5 +1,6 @@
 var timer;
 async function submit() {
+    calculating();
     const form = document.getElementById('form');
     let address = form.address.value;
     let response = await fetch(`/?address=${address}`);
@@ -21,6 +22,14 @@ async function submit() {
                     document.getElementById('minutes').innerHTML = remainingMinutes;
                     document.getElementById('seconds').innerHTML = remainingSeconds;
                     }, 1000); 
-            
+            hiding();  
     });
+};
+function calculating() {
+    document.forms.address.defaultValue = document.forms.address.value;
+    document.forms.address.value ='Calculating...';
+    
+};
+function hiding() {
+    document.forms.address.value = forms.address.defaultValue;
 }
