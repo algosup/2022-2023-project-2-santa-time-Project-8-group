@@ -158,48 +158,49 @@ input[type=submit] {
     position: absolute;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    left: 50vw;
-    top: 70vh;
-    height: 112vh;
+    left: 12vw;
+    top: 40vh;
+    height: 80vh;
     z-index: auto;
     visibility: hidden;
 }
 .present {
     position: relative;
-    height: 100vh;
+    height: 80vh;
     width: 50vw;
     display: inline-block;
 }
 
 .day {
-    max-width: 5vw;
-    max-height: 10vh;
+    width: 10vh;
+    height: 10vh;
     border-width: 2%;
     border-style: solid;
     border-color: red;
     background-color: red;
-    left: 15%;
-    top: 58vh;
+    left: 22vh;
+    top: 67vh;
 }
 .hour {
     max-width: 5vw;
-    max-height: 15vh;
+    max-height: 12vh;
     border-width: 2%;
     border-style: solid;
     border-color: blue;
     background-color: blue;
-    left: 16%;
-    top: 58vh;
+    left: 23vh;
+    top: 67vh;
 }
 .minute {
     max-width: 10vw;
     max-height: 4vh;
+
     border-style: solid;
     border-color:  rgb(255, 123, 8);
     background-color: rgb(255, 123, 8);
     transform: rotate(-35deg);
-    left: 35%;
-    top: 52vh;
+    left: 35vh;
+    top: 61vh;
 }
 .second {
     max-width: 8vw;
@@ -208,8 +209,8 @@ input[type=submit] {
     border-style: solid;
     border-color: green;
     background-color: green;
-    left: 30%;
-    top: 58vh;
+    left: 30vh;
+    top: 66.5vh;
 }
 
 
@@ -221,25 +222,34 @@ p {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-100%, 10%);
     display: inline-block;
-    height: 100vh;
+    height: 80vh;
     width: 50vw;
+    display: inline-block;
 }
 .days {
-    left: 18%;
-    top: 52%;
+    top: 60vh;
+    left: 14vw;
+    width: auto;
+    height: auto;
 }
 .hours {
-    left: 30%;
-    top: 50%;
+    top: 60vh;
+    left: 20vw;
+    width: auto;
+    height: auto;
 }
 .minutes {
-    left: 64%;
-    top: 50%;
+    top: 60vh;
+    left: 29vw;
     transform: rotate(-35deg);
+    width: auto;
+    height: auto;
 }
 .seconds {
-    left: 80%;
-    top: 54%;
+    top: 60vh;
+    left: 42vw;
+    width: auto;
+    height: auto;
 }
 
 @media screen and (max-width:500px) {
@@ -249,43 +259,63 @@ p {
     .background .tree .trunk{
         height: 100px;
     }
+    .background .presents .present {
+        height: 52vh;
+        width: 50vh;
+        left: 14vw;
+    }
     .background .presents .present .day{
         max-height: 5vh;
-        top: 46vh;
+        max-width: 5vw;
+        top: 43.5vh;
+        left: 10vw;
     }
     .background .presents .present .hour{
         max-height: 7vh;
-        top: 46vh;
+        top: 43.5vh;
+        left: 11vw;
     }
     .background .presents .present .minute{
-        max-height: 1.5vh;
-        top: 44vh;
+        max-height: 2vh;
+        top: 41.5vh;
+        left: 23vw;
     }
     .background .presents .present .second{
         max-height: 3vh;
-        top: 46vh;
+        top: 43.5vh;
+        left: 21vw;
+    }
+    .background .presents .para{
+        height: 47vh;
+        width: 60vw;
+        left: 76vw;
     }
     .background .presents .para .days{
-        top: 37vh;
+        top: 40vh;
+        left: 69vw;
+        height: auto;
         font-size: x-small;
     }
     .background .presents .para .hours{
-        top: 37vh;
-        left: 16vw;
+        height: auto;
+        top: 40vh;
+        left: 77vw;
         font-size: x-small;
     }
     .background .presents .para .minutes{
-        top: 38vh;
-        left: 32vw;
+        height: auto;
+        top: 30vh;
+        left: 31vw;
         font-size: x-small;
     }
     .background .presents .para .seconds{
-        top: 38vh;
-        left: 43vw;
+        height: auto;
+        top: 41vh;
+        left: 107vw;
         font-size: x-small;
     }
 }
-@media screen and (orientation:landscape) {
+/* @media screen and (orientation:landscape) {
     .background .presents .present .day{
         top: 70vh;
     }
@@ -312,5 +342,4 @@ p {
     .background .presents .para .seconds{
         top: 63vh;
     }
-
-}
+}*/
