@@ -1,0 +1,345 @@
+.sharing, .links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.sharing {
+    top: 0;
+    right: 0;
+}
+
+.links {
+    bottom: 0;
+    left: 0;
+}
+
+a, input[type="image"] {
+    font-size: 0;
+    margin: 2px;
+}
+
+.sharing img, .links img, input[type="image"] {
+    width: 50px;
+    height: 50px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 500px) {
+    .mobile-only {
+        display: none
+    }
+}
+
+.invert {
+    filter: invert();
+}
+
+
+
+form {
+    background-color: lightgray;
+    border-style: solid;
+    border-radius: 2%;
+    box-sizing: border-box;
+    margin-top: 10%;
+    width: 35%;
+    height: 35%;
+}
+
+.style {
+    border: 6% solid dimgrey;
+    border-radius: 6%;
+    width: 80%;
+    padding: 2% 4%;
+    margin: 3% 4%;
+    font-size: medium;
+    font-weight: bold;
+}
+
+input[type=text]:focus{
+    border: 5% solid black;
+}
+
+input[type=submit] {
+    background-color: dimgray;
+    border: none;
+    color: white;
+    padding: 2% 6%;
+    text-decoration: none;
+    margin: 1% 2%;
+    cursor: pointer;
+    font-size: small;
+}
+
+
+
+.background {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.tree {
+    --width: calc(min(50vw, 50vh)); /* max 50vw, keep aspect ratio otherwise */
+    --height: calc(min(80vh, 80vw)); /* max 80vh, keep aspect ratio otherwise */
+    width: var(--width);
+    height: var(--height);
+    overflow: hidden;
+}
+
+.trunk {
+    width: calc(var(--height)/10);
+    height: var(--height);
+    margin: 0 auto 5% auto;
+    background-color: #964b00;
+}
+
+.leaves {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+}
+
+/* Adapted from https://codepen.io/fvignals/pen/waxvqZ */
+.leaf {
+    position: relative; /* Thanks Guillaume */
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto -7.5% auto;
+}
+.leaf::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: calc(-1*var(--width));
+    border-left: var(--width) solid transparent;
+    border-right: var(--width) solid transparent;
+    border-bottom: var(--width) solid;
+}
+
+.leaf1 {
+    width: 25%;
+    padding-left: 25%;
+    padding-bottom: 25%;
+}
+.leaf1::after {
+    border-bottom-color: #00c000;
+}
+
+.leaf2 {
+    width: 37.5%;
+    padding-left: 37.5%;
+    padding-bottom: 37.5%;
+}
+.leaf2::after {
+    border-bottom-color: #00a000;
+}
+
+.leaf3 {
+    width: 100%;
+    padding-left: 50%;
+    padding-bottom: 50%;
+}
+.leaf3::after {
+    border-bottom-color: #008000;
+}
+
+
+.presents {
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 12vw;
+    top: 40vh;
+    height: 80vh;
+    z-index: auto;
+    visibility: hidden;
+}
+.present {
+    position: relative;
+    height: 80vh;
+    width: 50vw;
+    display: inline-block;
+}
+
+.day {
+    width: 10vh;
+    height: 10vh;
+    border-width: 2%;
+    border-style: solid;
+    border-color: red;
+    background-color: red;
+    left: 22vh;
+    top: 67vh;
+}
+.hour {
+    max-width: 5vw;
+    max-height: 12vh;
+    border-width: 2%;
+    border-style: solid;
+    border-color: blue;
+    background-color: blue;
+    left: 23vh;
+    top: 67vh;
+}
+.minute {
+    max-width: 10vw;
+    max-height: 4vh;
+
+    border-style: solid;
+    border-color:  rgb(255, 123, 8);
+    background-color: rgb(255, 123, 8);
+    transform: rotate(-35deg);
+    left: 35vh;
+    top: 61vh;
+}
+.second {
+    max-width: 8vw;
+    max-height: 9vh;
+    border-width: 2%;
+    border-style: solid;
+    border-color: green;
+    background-color: green;
+    left: 30vh;
+    top: 66.5vh;
+}
+
+
+p {
+    position: absolute;    
+}
+.para {
+    position: inherit;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-100%, 10%);
+    display: inline-block;
+    height: 80vh;
+    width: 50vw;
+    display: inline-block;
+}
+.days {
+    top: 60vh;
+    left: 14vw;
+    width: auto;
+    height: auto;
+}
+.hours {
+    top: 60vh;
+    left: 20vw;
+    width: auto;
+    height: auto;
+}
+.minutes {
+    top: 60vh;
+    left: 29vw;
+    transform: rotate(-35deg);
+    width: auto;
+    height: auto;
+}
+.seconds {
+    top: 60vh;
+    left: 42vw;
+    width: auto;
+    height: auto;
+}
+
+@media screen and (max-width:500px) {
+    form {
+        width: 80vw;
+    }
+    .background .tree .trunk{
+        height: 100px;
+    }
+    .background .presents .present {
+        height: 52vh;
+        width: 50vh;
+        left: 14vw;
+    }
+    .background .presents .present .day{
+        max-height: 5vh;
+        max-width: 5vw;
+        top: 43.5vh;
+        left: 10vw;
+    }
+    .background .presents .present .hour{
+        max-height: 7vh;
+        top: 43.5vh;
+        left: 11vw;
+    }
+    .background .presents .present .minute{
+        max-height: 2vh;
+        top: 41.5vh;
+        left: 23vw;
+    }
+    .background .presents .present .second{
+        max-height: 3vh;
+        top: 43.5vh;
+        left: 21vw;
+    }
+    .background .presents .para{
+        height: 47vh;
+        width: 60vw;
+        left: 76vw;
+    }
+    .background .presents .para .days{
+        top: 40vh;
+        left: 69vw;
+        height: auto;
+        font-size: x-small;
+    }
+    .background .presents .para .hours{
+        height: auto;
+        top: 40vh;
+        left: 77vw;
+        font-size: x-small;
+    }
+    .background .presents .para .minutes{
+        height: auto;
+        top: 30vh;
+        left: 31vw;
+        font-size: x-small;
+    }
+    .background .presents .para .seconds{
+        height: auto;
+        top: 41vh;
+        left: 107vw;
+        font-size: x-small;
+    }
+}
+/* @media screen and (orientation:landscape) {
+    .background .presents .present .day{
+        top: 70vh;
+    }
+    .background .presents .para .days{
+        top: 63vh;
+    }
+    .background .presents .present .hour{
+        top: 70vh;
+    }
+    .background .presents .para .hours{
+        top: 63vh;
+    }
+    .background .presents .present .minute{
+        top: 63vh;
+    }
+    .background .presents .para .minutes{
+        top: 62vh;
+        left: 31vw;
+    }
+    .background .presents .present .second{
+        top: 70vh;
+        max-height: 10vh;
+    }
+    .background .presents .para .seconds{
+        top: 63vh;
+    }
+}*/

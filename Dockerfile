@@ -27,8 +27,8 @@ RUN npm i fs
 # # Open port 2222 for SSH access
 # EXPOSE 2222
 # RUN chmod +x startup.sh && chown root:root /app
-ENV PORT=80
-EXPOSE 80
+ENV PORT=443
+EXPOSE 80 443
 
 # ENTRYPOINT [ "./startup.sh" ]
 CMD ["node", "./app.js"]
