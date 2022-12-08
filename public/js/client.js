@@ -1,8 +1,9 @@
 var timer;
 async function submit() {
-    calculating();
+    document.forms.address.defaultValue = document.forms.address.value;
+    document.forms.address.value ='Calculating...';
     const form = document.getElementById('form');
-    let address = form.address.value;
+    let address = form.address.defaultValue;
     let response = await fetch(`/?address=${address}`);
     response.json().then((json) => {
         let timestamp = json["time"];
@@ -22,14 +23,7 @@ async function submit() {
                     document.getElementById('minutes').innerHTML = remainingMinutes;
                     document.getElementById('seconds').innerHTML = remainingSeconds;
                     }, 1000); 
-            hiding();  
+                    document.forms.address.value = document.forms.address.defaultValue;
+                    document.getElementById('presents').style.visibility = 'visible';
     });
 };
-function calculating() {
-    document.forms.address.defaultValue = document.forms.address.value;
-    document.forms.address.value ='Calculating...';
-    
-};
-function hiding() {
-    document.forms.address.value = forms.address.defaultValue;
-}

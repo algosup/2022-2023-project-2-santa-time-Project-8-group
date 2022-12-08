@@ -16,23 +16,6 @@ app.get("/", async (req, res) => {
     }
 });
 
-// TODO: Create folders and refactor code to serve
-// static files more easily with express
-// (Exercise for Jason)
-/*
-    public/
-        css/
-            stylesheet.css
-        images/
-            ...
-        js/
-            client.js
-        website.html
-    private/
-        app.js
-        modules.js
-*/
-
 app.use(express.static('public'));
 
 app.listen(port);
