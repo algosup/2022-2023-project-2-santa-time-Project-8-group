@@ -2,6 +2,7 @@ var sunCalc = require('suncalc');
 
 const month = 12;
 const day = 25;
+const db = "51.144.112.142";
 
 function GetParameters(url) {
     let parameters = {}
@@ -20,7 +21,7 @@ function GetParameters(url) {
 }
 
 function ParamsToRequest(params) {   
-    let dbURL = "http://noel.gq/api?q="
+    let dbURL = "http://"+db+"/api?q="
     let request = dbURL + (params["address"] != undefined ? params["address"] : "" );
     return request
 }
