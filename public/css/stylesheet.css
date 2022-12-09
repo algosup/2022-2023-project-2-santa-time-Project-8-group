@@ -47,8 +47,8 @@ form {
     border-radius: 2%;
     box-sizing: border-box;
     margin-top: 10%;
-    width: 35%;
-    height: 35%;
+    width: 35vw;
+    height: 20vh;
 }
 
 .style {
@@ -90,6 +90,7 @@ body {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    height: 100vh;
 }
 
 .container {
@@ -220,7 +221,9 @@ p {
 
 @media screen and (max-width:500px) {
     form {
+        position: absolute;
         width: 80vw;
+        height: 17vh;
     }
     .background .tree .trunk{
         height: 100px;
@@ -280,32 +283,12 @@ p {
         left: 107vw;
         font-size: x-small;
     }
+    .links {
+        right: 0;
+        left: auto;
+    }
+    .presents {
+        left: 10vw;
+    }
 }
-/* @media screen and (orientation:landscape) {
-    .background .presents .present .day{
-        top: 70vh;
-    }
-    .background .presents .para .days{
-        top: 63vh;
-    }
-    .background .presents .present .hour{
-        top: 70vh;
-    }
-    .background .presents .para .hours{
-        top: 63vh;
-    }
-    .background .presents .present .minute{
-        top: 63vh;
-    }
-    .background .presents .para .minutes{
-        top: 62vh;
-        left: 31vw;
-    }
-    .background .presents .present .second{
-        top: 70vh;
-        max-height: 10vh;
-    }
-    .background .presents .para .seconds{
-        top: 63vh;
-    }
-}*/
+
