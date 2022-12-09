@@ -6,13 +6,17 @@
 }
 
 .sharing {
-    top: 0;
+    bottom: 0;
     right: 0;
 }
 
 .links {
     bottom: 0;
     left: 0;
+}
+
+.searchbar {
+    padding-top: 25vh;
 }
 
 a, input[type="image"] {
@@ -42,23 +46,32 @@ a, input[type="image"] {
 
 
 form {
-    background-color: lightgray;
-    border-style: solid;
-    border-radius: 2%;
-    box-sizing: border-box;
-    margin-top: 10%;
-    width: 35vw;
-    height: 20vh;
+    /* background-color: lightgray; */
+    /* border-style: solid; */
+    /* border-radius: 2%; */
+    /* box-sizing: border-box; */
+    /* margin-top: 10%; */
+    /* width: 35vw; */
+    /* height: 20vh; */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10vw;
 }
 
 .style {
     border: 6% solid dimgrey;
     border-radius: 6%;
-    width: 80%;
-    padding: 2% 4%;
-    margin: 3% 4%;
+    width: 33%;
+    /* height: 10%; */
+    /* padding: 2% 4%; */
+    /* margin: 3% 4%; */
     font-size: medium;
     font-weight: bold;
+    padding: 7px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
 }
 
 input[type=text]:focus{
@@ -69,11 +82,14 @@ input[type=submit] {
     background-color: dimgray;
     border: none;
     color: white;
-    padding: 2% 6%;
+    /* padding: 2% 6%; */
     text-decoration: none;
-    margin: 1% 2%;
+    /* margin: 1% 2%; */
     cursor: pointer;
     font-size: small;
+
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
 
@@ -85,6 +101,7 @@ input[type=submit] {
 
 body {
     margin: 0;
+    background-attachment: fixed;
     background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/05/Free-Download-Christmas-Backgrounds.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -220,11 +237,11 @@ p {
 }
 
 @media screen and (max-width:500px) {
-    form {
+    /* form {
         position: absolute;
         width: 80vw;
         height: 17vh;
-    }
+    } */
     .background .tree .trunk{
         height: 100px;
     }

@@ -31,4 +31,4 @@ ENV PORT=443
 EXPOSE 80 443
 
 # ENTRYPOINT [ "./startup.sh" ]
-CMD ["node", "./private/app.js"]
+CMD ["node", "./private/server.js"]
