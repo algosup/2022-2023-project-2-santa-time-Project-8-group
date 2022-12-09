@@ -117,10 +117,14 @@ body {
 }
 
 .present {
-    /* display: inline-block; */
+    visibility: hidden;
     position: relative;
-    animation: present-drop ease-in 0.5s forwards;
     margin-bottom: 100vh;
+}
+
+.show .present {
+    visibility: visible;
+    animation: present-drop ease-in 0.5s forwards;
 }
 
 @keyframes present-drop {

@@ -24,6 +24,6 @@ async function submit() {
                     document.getElementById('seconds').innerHTML = remainingSeconds;
                     }, 1000); 
                     document.forms.address.value = document.forms.address.defaultValue;
-                    document.getElementById('presents').style.visibility = 'visible';
+                    document.getElementsByClassName("presents")[0].classList.add("show");
     });
 };
