@@ -72,6 +72,7 @@ form {
     padding: 7px;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
+    z-index: 0;
 }
 
 input[type=text]:focus{
