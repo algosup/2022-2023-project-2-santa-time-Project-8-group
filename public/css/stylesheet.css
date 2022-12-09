@@ -47,8 +47,8 @@ form {
     border-radius: 2%;
     box-sizing: border-box;
     margin-top: 10%;
-    width: 35%;
-    height: 35%;
+    width: 35vw;
+    height: 20vh;
 }
 
 .style {
@@ -78,139 +78,106 @@ input[type=submit] {
 
 
 
-.background {
+:root {
+    --height: 100vh;
+    --width: 61.78vh;
+}
+
+body {
+    margin: 0;
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/05/Free-Download-Christmas-Backgrounds.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
     position: absolute;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    height: var(--height);
+    width: var(--width);
+    bottom: 0;
+    left: 30%;
+    transform: translate(-50%, 0);
 }
 
 .tree {
-    --width: calc(min(50vw, 50vh)); /* max 50vw, keep aspect ratio otherwise */
-    --height: calc(min(80vh, 80vw)); /* max 80vh, keep aspect ratio otherwise */
-    width: var(--width);
-    height: var(--height);
-    overflow: hidden;
+    height: 100%
 }
-
-.trunk {
-    width: calc(var(--height)/10);
-    height: var(--height);
-    margin: 0 auto 5% auto;
-    background-color: #964b00;
-}
-
-.leaves {
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 0;
-}
-
-/* Adapted from https://codepen.io/fvignals/pen/waxvqZ */
-.leaf {
-    position: relative; /* Thanks Guillaume */
-    height: 0;
-    overflow: hidden;
-    margin: 0 auto -7.5% auto;
-}
-.leaf::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    margin-left: calc(-1*var(--width));
-    border-left: var(--width) solid transparent;
-    border-right: var(--width) solid transparent;
-    border-bottom: var(--width) solid;
-}
-
-.leaf1 {
-    width: 25%;
-    padding-left: 25%;
-    padding-bottom: 25%;
-}
-.leaf1::after {
-    border-bottom-color: #00c000;
-}
-
-.leaf2 {
-    width: 37.5%;
-    padding-left: 37.5%;
-    padding-bottom: 37.5%;
-}
-.leaf2::after {
-    border-bottom-color: #00a000;
-}
-
-.leaf3 {
-    width: 100%;
-    padding-left: 50%;
-    padding-bottom: 50%;
-}
-.leaf3::after {
-    border-bottom-color: #008000;
-}
-
 
 .presents {
     position: absolute;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    left: 12vw;
-    top: 40vh;
-    height: 80vh;
-    z-index: auto;
-    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
+
 .present {
+    visibility: hidden;
     position: relative;
-    height: 80vh;
-    width: 50vw;
-    display: inline-block;
+    margin-bottom: 100vh;
 }
 
-.day {
-    width: 10vh;
-    height: 10vh;
-    border-width: 2%;
-    border-style: solid;
-    border-color: red;
-    background-color: red;
-    left: 22vh;
-    top: 67vh;
+.show .present {
+    visibility: visible;
+    animation: present-drop ease-in 0.5s forwards;
 }
-.hour {
-    max-width: 5vw;
-    max-height: 12vh;
-    border-width: 2%;
-    border-style: solid;
-    border-color: blue;
-    background-color: blue;
-    left: 23vh;
-    top: 67vh;
-}
-.minute {
-    max-width: 10vw;
-    max-height: 4vh;
 
-    border-style: solid;
-    border-color:  rgb(255, 123, 8);
-    background-color: rgb(255, 123, 8);
-    transform: rotate(-35deg);
-    left: 35vh;
-    top: 61vh;
+@keyframes present-drop {
+    100% {
+        margin-bottom: 0;
+    }
 }
-.second {
-    max-width: 8vw;
-    max-height: 9vh;
-    border-width: 2%;
-    border-style: solid;
-    border-color: green;
-    background-color: green;
-    left: 30vh;
-    top: 66.5vh;
+
+#present-days {
+    width: 20%;
+    animation-delay: 0s;
+}
+
+#present-hours {
+    width: 20%;
+    animation-delay: 0.2s;
+}
+
+#present-minutes {
+    width: 40%;
+    animation-delay: 0.4s;
+}
+
+#present-seconds {
+    width: 40%;
+    left: -10%;
+    margin-right: -10%;
+    animation-delay: 0.6s;
+}
+
+.present img {
+    width: 100%;
+}
+
+.present div {
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%, -25%);
+
+    font-size: 2vh;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+
+span {
+    font-size: 3vh;
+}
+
+span::after {
+    content: "\a";
+    white-space: pre;
 }
 
 
@@ -254,7 +221,9 @@ p {
 
 @media screen and (max-width:500px) {
     form {
+        position: absolute;
         width: 80vw;
+        height: 17vh;
     }
     .background .tree .trunk{
         height: 100px;
@@ -314,32 +283,12 @@ p {
         left: 107vw;
         font-size: x-small;
     }
+    .links {
+        right: 0;
+        left: auto;
+    }
+    .presents {
+        left: 10vw;
+    }
 }
-/* @media screen and (orientation:landscape) {
-    .background .presents .present .day{
-        top: 70vh;
-    }
-    .background .presents .para .days{
-        top: 63vh;
-    }
-    .background .presents .present .hour{
-        top: 70vh;
-    }
-    .background .presents .para .hours{
-        top: 63vh;
-    }
-    .background .presents .present .minute{
-        top: 63vh;
-    }
-    .background .presents .para .minutes{
-        top: 62vh;
-        left: 31vw;
-    }
-    .background .presents .present .second{
-        top: 70vh;
-        max-height: 10vh;
-    }
-    .background .presents .para .seconds{
-        top: 63vh;
-    }
-}*/
+
