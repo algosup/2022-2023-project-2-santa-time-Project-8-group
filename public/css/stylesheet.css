@@ -91,6 +91,7 @@ input[type=submit] {
 
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
+    background-image: url(../images/submitbg.jpeg);
 }
 
 
