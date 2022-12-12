@@ -37,14 +37,14 @@ async function ParseURL(params) {
     let coord = await RequestDB(req);
     let long;
     let lat;
-    if (data.features[0].geometry.coordinates[0] == undefined){
+    if (coord.features[0].geometry.coordinates[0] == undefined){
         req = ParamsToRequest(params,apiURL);
         coord = await RequestDB(req);
         long = coord.data[0].longitude;
         lat = coord.data[0].latitude;
     }else{
-        long = coord[0];
-        lat = coord[1];
+        long = coord.features[0].geometry.coordinates[0];
+        lat = coord.features[0].geometry.coordinates[1];
     }
     if (typeof long != 'undefined'){
         let nadir = Nadir(long, lat);
