@@ -22,6 +22,7 @@ Other team members:
   - [Out of scope](#out-of-scope)
   - [Future](#future)
 - [Scenarios](#scenarios)
+- [Functional analysis](#functional-analysis)
     - [Use Case 1](#use-case-1)
     - [Use Case 2](#use-case-2)
     - [Use Case 3](#use-case-3)
@@ -31,7 +32,6 @@ Other team members:
     - [Use Case 7](#use-case-7)
     - [Use Case 8](#use-case-8)
     - [Use Case 9](#use-case-9)
-- [Functional analysis](#functional-analysis)
 - [Success factors](#success-factors)
   - [Performance and Experience](#performance-and-experience)
   - [Scalability](#scalability)
@@ -98,6 +98,21 @@ Since the service should be available worldwide, translating the website to mult
 
 # Scenarios<!-- = Personaes -->
 
+| Use Case Number # | Name | Description | Actor(s) | Pre-Conditions | Flow of Events | Post-Conditions | Exit Criteria | Function Number # | Notes & Issues |
+|--|--|--|--|--|--|--|--|--|--|
+| U.C.# 1 | User First Flow | User wants to find out when Santa will arrive at his (or any given) location. | User | User lands on page from either an external site/platform or other project's page. | User goes through the opening animation, and enters their location | The result, according to the desired location is fetched and displayed | The case is closed when either the ETA or the coal is displayed | F1, F2, F3, F4, F5, F6, F7, F8| |
+| U.C.# 2 | User Shares Website | User wants to share the website through available means to others | User | User has executed U.C.# 1 | User clicks on any of the given social sharing links/ copy link button | This brings up a template message ready to be sent or copies to clipboard, which user can paste in messaging app directly | The case is closed when user gets confirmation of message being sent. | F9, F10, F11| |
+| U.C.# 3 | User Checks out other projects | User wants to check out other group's projects. | User | User has executed U.C.# 1 | User clicks on any of the Christmas tree balls to load one of the other projects | The desired project loads | The case is closed when user can actually start the first flow of the given project | F12, F13| |
+| U.C.# 4 | User searches with new address. | User wants to check when Santa will arrive for another address. | User | User has executed U.C.# 1 | User clears the results by entering a new location | The result for the new location loads | The case is closed when either the ETA or the coal is displayed. | F4, F5, F6, F7, F8, F14, F15, F16| |
+| U.C.# 5 | User checks out GitHub | User wants to find out more about the project's Code on Github. | User | User has executed U.C.# 1 | User clicks on GitHub button | The github project page opens | The case is closed when the user is able to view the code | F17, F18| |
+| U.C.# 6 | User checks out Algosup | User wants to find out more about Algosup. | User | User has executed U.C.# 1 | User clicks on Algosup button | Algosup's website opens | The case is closed when the user is able to view Algosup's website | F19, F20| |
+| U.C.# 7 | User wants to contact the Author | User wants to contact the author for bug reporting or issues, for instance | User, Designated Social Media Manager | User has executed U.C.# 1 | User clicks on contact info to reveal a contact e-mail | User sends message to provided email | The case is closed when the user has gotten an answer from the designated contact | F21, F22, F23| |
+| U.C.# 8 |User wants to adjust the cookie settings| User wants to adjust the settings for the third party cookies| User| User has landed on the website, cookie settings have popped up| User either: clicks on accept, refuse or customize| The cookie settings are updated| The case is closed when cookie settings update is confirmed via a message| F24, F25, F26, F27, F28| |
+| U.C.# 9 |User wants to check the privacy policy| User wants to check the privacy policy| User |User has landed on the website | User clicks on the privacy policy link in the cookie popup | The privacy notice page is displayed| The case is closed when the user can read the privacy notice page's entire content| F24, F25, F26| |
+
+
+# Functional analysis
+
 ### Use Case 1
 
 ![UC1](Images/U.C.%23%201.png)
@@ -133,13 +148,6 @@ Since the service should be available worldwide, translating the website to mult
 ### Use Case 9
 
 ![UC9](Images/U.C.%23%209.png)
-
-
-# Functional analysis
-
-*TBD*
-
-![Functional analysis](Images/Functional Analysis.png)
 
 
 
