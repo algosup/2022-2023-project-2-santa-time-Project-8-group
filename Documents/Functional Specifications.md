@@ -211,12 +211,6 @@ This will be done by communicating on different social networks.
   - Will advertise on Tik Tok to kids and their parents as well.
 
 
-For each persona from the [scenarios](#scenarios), the team will create an account on some of the following networks:
-- Quora
-- Reddit
-- Stack Overflow
-- TikTok
-
 Additionally, the team will use their professional or personal accounts to promote the service and website. Those are comprising but not limited to the following networks:
 - The same four networks as the personals
 - LinkedIn
