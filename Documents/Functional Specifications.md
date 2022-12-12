@@ -181,9 +181,35 @@ As such, the service will be hosted on different servers and include a self-repl
 ## Advertising
 
 To verify if the service is scalable and performant, we must attract as many people as possible.
-For this, the team is also required in parallel to do some advertisements for the service and the website.
+For this, the team is also required in parallel to do some advertisement for the service and the website.
 
 This will be done by communicating on different social networks.
+
+We have defined 4 main Personas/Targets:
+  - French person
+  - Michel Mont
+  - IMAGE
+  - Will advertise on various sub-reddits
+  - Will advertise on Quora
+  
+- English/International person
+  - John Borrison
+  - IMAGE
+  - Will advertise on various sub-reddits
+  - Will advertise on Quora
+  
+- English/International developer
+  - Carlos Titswills
+    - IMAGE
+    - Will advertise on Quora from a developer POV
+    - Will advertise on StackOverflow from a developer POV
+    - Will advertise on Reddit from a developer POV
+  
+- English Tiktoker
+  - Gwyneth Nobadu
+  - IMAGE
+  - Will advertise on Tik Tok to kids and their parents as well.
+
 
 For each persona from the [scenarios](#scenarios), the team will create an account on some of the following networks:
 - Quora
