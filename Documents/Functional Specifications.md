@@ -194,23 +194,20 @@ This will be done by communicating on different social networks.
   
 - ### English/International person
   - John Borrison
-  - ![John Borrison](Images/john.jpg)
-  - 
+  - <img src="Images/john.jpg" alt="john" width="200"/>
   - Will advertise on various sub-reddits
   - Will advertise on Quora
   
 - ### English/International developer
   - Carlos Titswills
-    - ![Carlos Titswills](Images/carlos.jpg)
-    - 
-    - Will advertise on Quora from a developer POV
-    - Will advertise on StackOverflow from a developer POV
-    - Will advertise on Reddit from a developer POV
+  - <img src="Images/carlos.jpg" alt="carlos" width="200"/>
+  - Will advertise on Quora from a developer POV
+  - Will advertise on StackOverflow from a developer POV
+  - Will advertise on Reddit from a developer POV
   
 - ### English Tiktoker
   - Gwyneth Nobadu
-  - ![Gwyneth Nobadu](Images/gwyneth.jpg)
-  - 
+  - <img src="Images/gwyneth.jpg" alt="gwyneth" width="200"/>
   - Will advertise on Tik Tok to kids and their parents as well.
 
 
