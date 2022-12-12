@@ -33,7 +33,7 @@ a, input[type="image"] {
     border-radius: 50%;
 }
 
-@media screen and (min-width: 500px) {
+@media only screen and not (hover: none) {
     .mobile-only {
         display: none
     }
