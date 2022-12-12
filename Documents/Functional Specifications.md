@@ -188,26 +188,26 @@ This will be done by communicating on different social networks.
 *We have defined 4 main Personas/Targets:*
 - ### French person
   - Michel Mont
-  - ![Michel Mont](/Images/michel.jpg)
+  - ![Michel Mont](Images/michel.jpg)
   - Will advertise on various sub-reddits
   - Will advertise on Quora
   
 - ### English/International person
   - John Borrison
-  - ![John Borrison](/Images/john.jpg)
+  - ![John Borrison](Images/john.jpg)
   - Will advertise on various sub-reddits
   - Will advertise on Quora
   
 - ### English/International developer
   - Carlos Titswills
-    - ![Carlos Titswills](/Images/carlos.jpg)
+    - ![Carlos Titswills](Images/carlos.jpg)
     - Will advertise on Quora from a developer POV
     - Will advertise on StackOverflow from a developer POV
     - Will advertise on Reddit from a developer POV
   
 - ### English Tiktoker
   - Gwyneth Nobadu
-  - ![Gwyneth Nobadu](/Images/gwyneth.jpg)
+  - ![Gwyneth Nobadu](Images/gwyneth.jpg)
   - Will advertise on Tik Tok to kids and their parents as well.
 
 
