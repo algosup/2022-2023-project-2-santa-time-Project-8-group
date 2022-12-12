@@ -22,6 +22,15 @@ Other team members:
   - [Out of scope](#out-of-scope)
   - [Future](#future)
 - [Scenarios](#scenarios)
+    - [Use Case 1](#use-case-1)
+    - [Use Case 2](#use-case-2)
+    - [Use Case 3](#use-case-3)
+    - [Use Case 4](#use-case-4)
+    - [Use Case 5](#use-case-5)
+    - [Use Case 6](#use-case-6)
+    - [Use Case 7](#use-case-7)
+    - [Use Case 8](#use-case-8)
+    - [Use Case 9](#use-case-9)
 - [Functional analysis](#functional-analysis)
 - [Success factors](#success-factors)
   - [Performance and Experience](#performance-and-experience)
@@ -79,7 +88,7 @@ That is because the service should not just make API calls but instead make all 
 
 ## Future
 
-The website may include a GPS geolocalisation. It would enable the user to get the direct result without having them write their address.
+The website may include a GPS geolocation. It would enable the user to get the direct result without having them write their address.
 
 Later, the team may implement a visual representation of the location. It would be done by having a world map in the background so long it does not impact the server's performance.
 
@@ -89,7 +98,42 @@ Since the service should be available worldwide, translating the website to mult
 
 # Scenarios<!-- = Personaes -->
 
-*TBD*
+### Use Case 1
+
+![UC1](Images/U.C.%23%201.png)
+
+### Use Case 2
+
+![UC2](Images/U.C.%23%202.png)
+
+### Use Case 3
+
+![UC3](Images/U.C.%23%203.png)
+
+### Use Case 4
+
+![UC4](Images/U.C.%23%204.png)
+
+### Use Case 5
+
+![UC5](Images/U.C.%23%205.png)
+
+### Use Case 6
+
+![UC6](Images/U.C.%23%206.png)
+
+### Use Case 7
+
+![UC7](Images/U.C.%23%207.png)
+
+### Use Case 8
+
+![UC8](Images/U.C.%23%208.png)
+
+### Use Case 9
+
+![UC9](Images/U.C.%23%209.png)
+
 
 # Functional analysis
 
