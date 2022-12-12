@@ -46,13 +46,6 @@ a, input[type="image"] {
 
 
 form {
-    /* background-color: lightgray; */
-    /* border-style: solid; */
-    /* border-radius: 2%; */
-    /* box-sizing: border-box; */
-    /* margin-top: 10%; */
-    /* width: 35vw; */
-    /* height: 20vh; */
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -61,12 +54,8 @@ form {
 }
 
 .style {
-    border: 6% solid dimgrey;
-    border-radius: 6%;
+    border: solid dimgrey;
     width: 33%;
-    /* height: 10%; */
-    /* padding: 2% 4%; */
-    /* margin: 3% 4%; */
     font-size: medium;
     font-weight: bold;
     padding: 7px;
@@ -92,6 +81,11 @@ input[type=submit] {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     background-image: url(../images/submitbg.jpeg);
+}
+
+input.test::placeholder {
+    color: white;
+    font-size: large;
 }
 
 

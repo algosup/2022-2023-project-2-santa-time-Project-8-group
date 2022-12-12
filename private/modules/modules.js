@@ -37,18 +37,29 @@ async function ParseURL(params) {
     let coord = await RequestDB(req);
     let long;
     let lat;
-    if (coord.features[0].geometry.coordinates[0] == undefined){
+    let country;
+    let region;
+    let street;
+    if (coord.features[0] == undefined){
         req = ParamsToRequest(params,apiURL);
         coord = await RequestDB(req);
+        if(coord.data[0] == undefined) return {"time": undefined};
         long = coord.data[0].longitude;
         lat = coord.data[0].latitude;
+        country = coord.data[0].country;
+        region = coord.data[0].region;
+        street = coord.data[0].street;
     }else{
         long = coord.features[0].geometry.coordinates[0];
         lat = coord.features[0].geometry.coordinates[1];
+        country = coord.features[0].properties.country;
+        region = coord.features[0].properties.state != undefined ? coord.features[0].properties.state : coord.features[0].properties.city   ;
+        street = coord.features[0].properties.name;
     }
     if (typeof long != 'undefined'){
         let nadir = Nadir(long, lat);
-        return {"time": nadir};
+        // console.log(country, region, street)
+        return {"time": nadir, "country": country, "region": region, "street": street};
     }
     
 }
