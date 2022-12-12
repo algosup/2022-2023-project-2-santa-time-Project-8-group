@@ -192,7 +192,7 @@ span::after {
     white-space: pre;
 }
 
-@media screen and (max-width:500px) {
+@media only screen and (hover: none){
     .container{
         height: 50%;
         width: 50%;
@@ -203,12 +203,32 @@ span::after {
         left: -4vw;
     }
     .container .presents .present div {
-        font-size: x-small;
+        font-size: x-large;
     }
     .container .presents .present span {
-        font-size: x-small;
+        font-size: x-large;
     }
     .presents {
         left: 10vw;
     }
-}
+    .sharing img, .links img,  input[type='image'] {
+        width: 100px;
+        height: 100px;
+    }
+    .links .credits {
+        height: 50px;
+        font-size: larger;
+    }
+    .links .contact {
+        height: 50px;
+        font-size: larger;
+    }
+    .searchbar form {
+        position: relative;
+        top: 20vh;
+        left: -9vw;
+    }
+    .searchbar form .style {
+        width: 50vw;
+    }
+}   
