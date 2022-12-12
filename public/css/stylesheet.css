@@ -46,13 +46,6 @@ a, input[type="image"] {
 
 
 form {
-    /* background-color: lightgray; */
-    /* border-style: solid; */
-    /* border-radius: 2%; */
-    /* box-sizing: border-box; */
-    /* margin-top: 10%; */
-    /* width: 35vw; */
-    /* height: 20vh; */
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -154,22 +147,22 @@ body {
 }
 
 #present-days {
-    width: 20%;
+    width: 15vw;
     animation-delay: 0s;
 }
 
 #present-hours {
-    width: 20%;
+    width: 15vw;
     animation-delay: 0.2s;
 }
 
 #present-minutes {
-    width: 40%;
+    width: 25vw;
     animation-delay: 0.4s;
 }
 
 #present-seconds {
-    width: 40%;
+    width: 25vw;
     left: -10%;
     margin-right: -10%;
     animation-delay: 0.6s;
@@ -199,115 +192,23 @@ span::after {
     white-space: pre;
 }
 
-
-p {
-    position: absolute;    
-}
-.para {
-    position: inherit;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-100%, 10%);
-    display: inline-block;
-    height: 80vh;
-    width: 50vw;
-    display: inline-block;
-}
-.days {
-    top: 60vh;
-    left: 14vw;
-    width: auto;
-    height: auto;
-}
-.hours {
-    top: 60vh;
-    left: 20vw;
-    width: auto;
-    height: auto;
-}
-.minutes {
-    top: 60vh;
-    left: 29vw;
-    transform: rotate(-35deg);
-    width: auto;
-    height: auto;
-}
-.seconds {
-    top: 60vh;
-    left: 42vw;
-    width: auto;
-    height: auto;
-}
-
 @media screen and (max-width:500px) {
-    /* form {
-        position: absolute;
-        width: 80vw;
-        height: 17vh;
-    } */
-    .background .tree .trunk{
-        height: 100px;
+    .container{
+        height: 50%;
+        width: 50%;
+        left: 45vw;
     }
-    .background .presents .present {
-        height: 52vh;
+    .container .presents .present {
         width: 50vh;
-        left: 14vw;
+        left: -4vw;
     }
-    .background .presents .present .day{
-        max-height: 5vh;
-        max-width: 5vw;
-        top: 43.5vh;
-        left: 10vw;
-    }
-    .background .presents .present .hour{
-        max-height: 7vh;
-        top: 43.5vh;
-        left: 11vw;
-    }
-    .background .presents .present .minute{
-        max-height: 2vh;
-        top: 41.5vh;
-        left: 23vw;
-    }
-    .background .presents .present .second{
-        max-height: 3vh;
-        top: 43.5vh;
-        left: 21vw;
-    }
-    .background .presents .para{
-        height: 47vh;
-        width: 60vw;
-        left: 76vw;
-    }
-    .background .presents .para .days{
-        top: 40vh;
-        left: 69vw;
-        height: auto;
+    .container .presents .present div {
         font-size: x-small;
     }
-    .background .presents .para .hours{
-        height: auto;
-        top: 40vh;
-        left: 77vw;
+    .container .presents .present span {
         font-size: x-small;
-    }
-    .background .presents .para .minutes{
-        height: auto;
-        top: 30vh;
-        left: 31vw;
-        font-size: x-small;
-    }
-    .background .presents .para .seconds{
-        height: auto;
-        top: 41vh;
-        left: 107vw;
-        font-size: x-small;
-    }
-    .links {
-        right: 0;
-        left: auto;
     }
     .presents {
         left: 10vw;
     }
 }
-
