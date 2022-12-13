@@ -255,4 +255,12 @@ span::after {
         font-size: 1.5vh;
 
     }
+    .groups {
+        bottom: 16vh;
+        right: none;
+        left: 0;
+    }
+    .groups button {
+        font-size: larger;
+    }
 }   
