@@ -196,21 +196,26 @@ span::after {
 @media only screen and (hover: none){
     .container{
         height: 50%;
-        width: 50%;
-        left: 45vw;
+        width: 70%;
+        left: 38vw;
+    }
+    .container .tree {
+        position: relative;
+        height: 65vh;
+        bottom: 17vh;
+        left: 5vw;
     }
     .container .presents .present {
-        width: 50vh;
         left: -4vw;
     }
     .container .presents .present div {
-        font-size: x-large;
+        font-size: 1.75vh;
     }
     .container .presents .present span {
-        font-size: x-large;
+        font-size: 1.75vh;
     }
     .presents {
-        left: 10vw;
+        left: 15vw;
     }
     .sharing img, .links img,  input[type='image'] {
         width: 100px;
@@ -226,10 +231,16 @@ span::after {
     }
     .searchbar form {
         position: relative;
-        top: 20vh;
-        left: -9vw;
+        top: 30vh;
+        left: -10vw;
     }
     .searchbar form .style {
         width: 50vw;
+        height: 3vh;
+        font-size: 2vh;
+    }
+    .searchbar form input[type="submit"] {
+        font-size: 1.5vh;
+
     }
 }   
