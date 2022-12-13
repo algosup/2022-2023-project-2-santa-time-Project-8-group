@@ -15,10 +15,6 @@
     left: 0;
 }
 
-.searchbar {
-    padding-top: 25vh;
-}
-
 a, input[type="image"] {
     font-size: 0;
     margin: 2px;
@@ -43,7 +39,23 @@ a, input[type="image"] {
     filter: invert();
 }
 
+.groups {
+    position: absolute;
+    bottom: 2vh;
+    right: 20vw;
+}
 
+.groups button {
+    padding: 1em;
+    background-color: lime;
+    border-radius: 3em;    
+}
+
+
+
+.searchbar {
+    padding-top: 25vh;
+}
 
 form {
     text-align: center;
