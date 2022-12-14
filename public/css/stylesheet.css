@@ -215,7 +215,7 @@ span::after {
         position: relative;
         height: 65vh;
         bottom: 17vh;
-        left: 5vw;
+        left: 7vw;
     }
     .container .presents .present {
         left: -4vw;
