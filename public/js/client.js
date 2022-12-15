@@ -8,6 +8,7 @@ async function submit() {
         return;
     }else{
         document.forms.address.value ='Calculating...';
+        document.forms.address.disabled = true;
         document.forms.address.classList.remove("test");
         document.forms.address.style += ";font-size: 2vh;";
     }
@@ -40,6 +41,7 @@ async function submit() {
                     document.getElementsByClassName("presents")[0].classList.add("show");
                     }, 100); 
                     document.forms.address.value = json["country"] + ", " + document.forms.address.defaultValue;
+                    document.forms.address.disabled = false;
                     document.forms.address.style += ";font-size: 2vh;"
     });
 };
