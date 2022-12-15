@@ -39,6 +39,10 @@ a, input[type="image"] {
     filter: invert();
 }
 
+.algocolor {
+    filter: invert(21%) sepia(7%) saturate(2981%) hue-rotate(163deg) brightness(91%) contrast(88%);
+}
+
 .groups {
     position: absolute;
     bottom: 2vh;
@@ -215,7 +219,7 @@ span::after {
         position: relative;
         height: 65vh;
         bottom: 17vh;
-        left: 5vw;
+        left: 7vw;
     }
     .container .presents .present {
         left: -4vw;
