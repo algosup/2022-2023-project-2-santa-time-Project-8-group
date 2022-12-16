@@ -198,7 +198,7 @@
 
 	- ## Test Coverage overview
 
-        - <img src="Images/image_1670930544960_0.png" height=495 width=598>
+        - <img src="Images/image_1670930544960_0.png">
 
 	- ## Test Requirements Traceability Matrix
 	  
