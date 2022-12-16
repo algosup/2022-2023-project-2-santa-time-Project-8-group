@@ -10,7 +10,6 @@
 			- **Integration testing:** It focuses on the construction and design of the software. You need to see that the integrated units 
 			  are working without errors or not.
 			- **System testing:** In this method, your software is compiled as a whole and then tested as a whole. This testing strategy  checks the functionality, security, portability, amongst others.
-			- ![Testing Pyramid.png](Images/Testing_Pyramid_1670928704599_0.png){:height 350, :width 616}
             - <img src="Images/Testing_Pyramid_1670928704599_0.png" height=350 width=616>
 		- <ins>Regression Testing</ins>
 			- is defined as a type of software testing to confirm that a recent program or code change has not  adversely affected existing features. Regression Testing is nothing but a full or partial selection of already executed test cases that are  re-executed to ensure existing functionalities work fine.
@@ -155,7 +154,7 @@
 				- **[Largest Contentful Paint (LCP)](https://web.dev/lcp/)**: measures *loading* performance. To provide a good user experience, LCP should occur within **2.5 seconds** of when the page first starts loading.
 				- **[First Input Delay (FID)](https://web.dev/fid/)**: measures *interactivity*. To provide a good user experience, pages should have a FID of **100 milliseconds** or less.
 				- **[Cumulative Layout Shift (CLS)](https://web.dev/cls/)**: measures *visual stability*. To provide a good user experience, pages should maintain a CLS of **0.1.** or less.
-				- ![image.png](Images/image_1670575952358_0.png){:height 202, :width 674}
+                - <img src="Images/image_1670575952358_0.png" height=202 width=674>
 			- Therefore the main KPIs will be the page loading times and the number of concurrent users
 			- It goes without saying that the goal of the quality assurance engineering that will be done is also to ensure that the product if bug free upon release.
 
@@ -165,7 +164,7 @@
 			- A single quality assurance engineer is allocated to the task, and will be in charge of both planning, testing, maintaining and documentation.
 			- The testing phases will begin once the first release of the product is  published by the development team.
 				- *Extract from the project's management timeline:*
-					- ![image.png](Images/image_1670326105077_0.png)
+                    - <img src="Images/image_1670326105077_0.png">
 					- This leaves us with a 22 days testing period until final release on the 13th of December
 
 		- ### Scope
@@ -188,7 +187,7 @@
 		  
 			- DONE Considering the functional analysis of the product, we can anticipate that the following components will be tested with the following methodology:
 			  
-				- ![TestTypes.png](Images/TestTypes_1670928110848_0.png){:height 217, :width 893}
+                - <img src="Images/TestTypes_1670928110848_0.png" height=217 width=893>
 				- *NB: The code and Unit Testing are to be performed by the developer, while sanity testing should be performed in the CI/CD pipeline, after each functional change*
 				- We can also split our tests into three main categories:
 				- |Front End|Data/Back End|Non-Functional|
@@ -199,7 +198,7 @@
 
 	- ## Test Coverage overview
 
-		- ![image.png](Images/image_1670930544960_0.png){:height 495, :width 598}
+        - <img src="Images/image_1670930544960_0.png" height=495 width=598>
 
 	- ## Test Requirements Traceability Matrix
 	  
