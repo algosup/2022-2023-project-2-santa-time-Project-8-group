@@ -34,6 +34,11 @@ a, input[type="image"] {
         display: none
     }
 }
+@media only screen and (hover: none) {
+    .pc-only {
+        display: none
+    }
+}
 
 .invert {
     filter: invert();
