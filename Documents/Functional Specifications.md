@@ -6,9 +6,7 @@ Other team members:
 - [Mathieu Chaput](https://github.com/Chaput-Mathieu)
 
 
-
 <br><br>
-
 
 
 <details>
