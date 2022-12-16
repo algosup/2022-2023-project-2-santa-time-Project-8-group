@@ -11,6 +11,7 @@
 			  are working without errors or not.
 			- **System testing:** In this method, your software is compiled as a whole and then tested as a whole. This testing strategy  checks the functionality, security, portability, amongst others.
 			- ![Testing Pyramid.png](Images/Testing_Pyramid_1670928704599_0.png){:height 350, :width 616}
+            - <img src="Images/Testing_Pyramid_1670928704599_0.png" height=350 width=616>
 		- <ins>Regression Testing</ins>
 			- is defined as a type of software testing to confirm that a recent program or code change has not  adversely affected existing features. Regression Testing is nothing but a full or partial selection of already executed test cases that are  re-executed to ensure existing functionalities work fine.
 		- <ins>Test Environment</ins>
