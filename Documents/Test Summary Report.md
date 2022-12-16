@@ -1,9 +1,14 @@
+Author: [Mathis Kakal](https://github.com/mathiskakal)
+
+
+
 - # Introduction
   
 	- ## Purpose
 		- The test summary report, also known as a Test Closure Report, provides stakeholders with a condensed account of the overall test results, defects and connected data following a test project. It will also provide stakeholders with insight on how the quality assurance engineers ensured compliance of the product to Functional, Product and Business Requirements.
 	- ## Glossary
-	  
+        <details>
+        <summary>Develop</summary>
 		- <ins>Test Pyramid</ins>
 		  
 			- **Unit Testing:** This software testing basic approach  is followed by the programmer to test the unit of the program. It helps  developers to know whether the individual unit of the code is working properly or not.
@@ -41,6 +46,7 @@
 				- Spike Testing is mostly a stress test over a very short amount of time. (sudden peak)
 			- <ins>Soak Test</ins>
 				- Soak Testing is both load and stress testing since it allows to monitor both performance and robustness of an app under heavy load, specifically over large amounts of time.
+        </details>
 	- ## Points of Contact
 	  
 		- If you have any inquiries about the quality management, or any aspect of the product, please contact one of our team representatives:
