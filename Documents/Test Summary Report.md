@@ -10,7 +10,7 @@
 			- **Integration testing:** It focuses on the construction and design of the software. You need to see that the integrated units 
 			  are working without errors or not.
 			- **System testing:** In this method, your software is compiled as a whole and then tested as a whole. This testing strategy  checks the functionality, security, portability, amongst others.
-			- ![Testing Pyramid.png](../assets/Testing_Pyramid_1670928704599_0.png){:height 350, :width 616}
+			- ![Testing Pyramid.png](Images/Testing_Pyramid_1670928704599_0.png){:height 350, :width 616}
 		- <ins>Regression Testing</ins>
 			- is defined as a type of software testing to confirm that a recent program or code change has not  adversely affected existing features. Regression Testing is nothing but a full or partial selection of already executed test cases that are  re-executed to ensure existing functionalities work fine.
 		- <ins>Test Environment</ins>
@@ -154,7 +154,7 @@
 				- **[Largest Contentful Paint (LCP)](https://web.dev/lcp/)**: measures *loading* performance. To provide a good user experience, LCP should occur within **2.5 seconds** of when the page first starts loading.
 				- **[First Input Delay (FID)](https://web.dev/fid/)**: measures *interactivity*. To provide a good user experience, pages should have a FID of **100 milliseconds** or less.
 				- **[Cumulative Layout Shift (CLS)](https://web.dev/cls/)**: measures *visual stability*. To provide a good user experience, pages should maintain a CLS of **0.1.** or less.
-				- ![image.png](../assets/image_1670575952358_0.png){:height 202, :width 674}
+				- ![image.png](Images/image_1670575952358_0.png){:height 202, :width 674}
 			- Therefore the main KPIs will be the page loading times and the number of concurrent users
 			- It goes without saying that the goal of the quality assurance engineering that will be done is also to ensure that the product if bug free upon release.
 
@@ -164,7 +164,7 @@
 			- A single quality assurance engineer is allocated to the task, and will be in charge of both planning, testing, maintaining and documentation.
 			- The testing phases will begin once the first release of the product is  published by the development team.
 				- *Extract from the project's management timeline:*
-					- ![image.png](../assets/image_1670326105077_0.png)
+					- ![image.png](Images/image_1670326105077_0.png)
 					- This leaves us with a 22 days testing period until final release on the 13th of December
 
 		- ### Scope
@@ -187,7 +187,7 @@
 		  
 			- DONE Considering the functional analysis of the product, we can anticipate that the following components will be tested with the following methodology:
 			  
-				- ![TestTypes.png](../assets/TestTypes_1670928110848_0.png){:height 217, :width 893}
+				- ![TestTypes.png](Images/TestTypes_1670928110848_0.png){:height 217, :width 893}
 				- *NB: The code and Unit Testing are to be performed by the developer, while sanity testing should be performed in the CI/CD pipeline, after each functional change*
 				- We can also split our tests into three main categories:
 				- |Front End|Data/Back End|Non-Functional|
@@ -198,7 +198,7 @@
 
 	- ## Test Coverage overview
 
-		- ![image.png](../assets/image_1670930544960_0.png){:height 495, :width 598}
+		- ![image.png](Images/image_1670930544960_0.png){:height 495, :width 598}
 
 	- ## Test Requirements Traceability Matrix
 	  
@@ -334,8 +334,6 @@
 			  | NFT6.1.1 |                           | Test for Mobile  | Does it render well ? passed if yes | Mobile/Tablet(Safari & Chromium); Desktop (Chrome, Edge, Firefox) |
 			  | NFT6.1.2 |                           | Test for Tablet  | Does it render well ? passed if yes | Mobile/Tablet(Safari & Chromium); Desktop (Chrome, Edge, Firefox) |
 			  | NFT6.1.3 |                           | Test for Desktop | Does it render well ? passed if yes | Mobile/Tablet(Safari & Chromium); Desktop (Chrome, Edge, Firefox) |
-		-
-		-
 	- ## Testing Tools
 
 		- ### Bug reporting
@@ -368,13 +366,12 @@
 			- Both the website and the database will go through Load, Spike, Soak and Stress testing
 		- The tests will be run by a single Quality Assurance Engineer (myself)
 		- Throughout the whole duration of the project.
-# Documenting
-
+- # Documenting
 
 	- ## Testing Timeline
 	  
 		- Here is an overview of how the testing will be conducted in time.
-		- ![image.png](../assets/image_1671145766937_0.png)
+		- ![image.png](Images/image_1671145766937_0.png)
 	- ## Results/Report Overview
 	  
 		- We mainly used Trello as a bug reporting tool.
@@ -383,18 +380,18 @@
 		- ### Server testing (Soak test, Spike test with JMeter)
 			- There have been noticeable improvements to the server's performance between week 3 and week 5. Prior to posterior improvements, the docker image was unoptimized and the server ran solely on a container.
 				- <ins>Spike test 1 (1000 requests in 5 seconds) (most of the requests are still in a reasonable range) (response time in ms)</ins>
-					- ![1000 over a few seconds.png](../assets/1000_over_a_few_seconds_1671150126699_0.png)
+					- ![1000 over a few seconds.png](Images/1000_over_a_few_seconds_1671150126699_0.png)
 				- <ins>Spike test 2 (2000 requests in 5 seconds almost half of the requests induce unacceptable age loads)</ins>
-					- ![2000 over a few seconds.png](../assets/2000_over_a_few_seconds_1671150133931_0.png)
+					- ![2000 over a few seconds.png](Images/2000_over_a_few_seconds_1671150133931_0.png)
 			- Whereas, once kubernetes, and major improvements to the docker image and additional configuration were done (by Week 5), we get totally different results:
 				- <ins>Spike test 1000 over 5 seconds (great performance)</ins>
-					- ![1000 over few seconds.png](../assets/1000_over_few_seconds_1671150146710_0.png)
+					- ![1000 over few seconds.png](Images/1000_over_few_seconds_1671150146710_0.png)
 				- <ins>Spike test 10 000 over a minute (only a very small fraction of the requests have a drop in performance)</ins>
-					- ![10000 over few seconds.png](../assets/10000_over_few_seconds_1671150157973_0.png)
+					- ![10000 over few seconds.png](Images/10000_over_few_seconds_1671150157973_0.png)
 				- <ins>Spike test 15 000 over a minute (server starting to respond predictably slow)</ins>
-					- ![15000.png](../assets/15000_1671150163284_0.png)
+					- ![15000.png](Images/15000_1671150163284_0.png)
 				- <ins>Bonus: Spike test 50 000 over 3 minutes (way out of bounds...)</ins>
-					- ![50000 over 2 mins.png](../assets/50000_over_2_mins_1671150168493_0.png)
+					- ![50000 over 2 mins.png](Images/50000_over_2_mins_1671150168493_0.png)
 		- ### Database testing (Soak test, Spike test with JMeter)
 			- The database (Photon), based on elasticsearch, features some caching and location bias, making it pass with reasonable performances under stress whether it is short or long bursts. It is pretty much on par with the main server as it fulfills to provide an acceptable response time for up to 10 000 users. it even held up to 30 000 in a spike test, near the end of its development.
 	- ## Release Notes
